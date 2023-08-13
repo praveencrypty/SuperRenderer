@@ -5,23 +5,24 @@
 
 using namespace std;
 
-struct vertex
-{
-	vector<float> position; 
-	vector<float> color;
-};
+
+
+	
 
 
 class Mesh
 {
 private:
-	vertex Vertex;
+	vector<float> position;
+	vector<float> color;
+
+	vector<float> vertex;
 
 public:
-	Mesh(vector<float> data, GLuint buffer);
+	Mesh(vector<float> pos, vector<float> col, GLuint buffer);
 
 	void setupMesh(GLuint buffer);
 
-
+	void drawMesh();
 };
 

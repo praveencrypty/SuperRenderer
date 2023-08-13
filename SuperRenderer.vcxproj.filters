@@ -81,4 +81,8 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="external\shaders\FragmentShader.frag" />
+    <None Include="external\shaders\VertexShader.vert" />
+  </ItemGroup>
 </Project>

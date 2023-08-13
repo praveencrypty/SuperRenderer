@@ -43,6 +43,10 @@
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\UI.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="external\shaders\FragmentShader.frag" />
+    <None Include="external\shaders\VertexShader.vert" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

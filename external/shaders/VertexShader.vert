@@ -7,7 +7,7 @@ out vec4 ourColor; // specify a color output to the fragment shader
 
 void main()
 {
-    gl_Position = transform * vec4(0.5f * aPos * cos(timer), 1.0); // Mandotary Default Output variable 
+    gl_Position =   vec4(aPos, 1.0); // Mandotary Default Output variable 
 
-    ourColor = aCol; // set the output variable to a dark-red color
+    ourColor = vec4(aCol,1.0); // set the output variable to a dark-red color
 }

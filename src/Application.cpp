@@ -60,6 +60,12 @@ void main()
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	glViewport(0, 0, mode->width, mode->height);
 
+
+	//Shader Setup
+	//Currently using default shader in gpu
+
+	
+
 	//Buffers
 	GLuint mainBuffer;
 	
@@ -67,13 +73,23 @@ void main()
 
 	glBindBuffer(GL_ARRAY_BUFFER, mainBuffer);
 
+	Mesh m({0.5,0.5,0.0,
+			0.0,0.0,0.0,
+			0.5,0.0,0.0},
+					  {	0.5,0.5,0.0,
+					  	0.1,0.0,0.0,
+					  	0.5,0.0,0.0 }, mainBuffer);
 
-
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	
 
 
 	//UI Setup
 	setupUI(window);
+
+
+
+
+
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -87,7 +103,7 @@ void main()
 		
 		
 		
-
+		m.drawMesh();
 
 
 
